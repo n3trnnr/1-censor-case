@@ -8,10 +8,7 @@ const censor = () => {
         if (str1 && str2 === null) {
             for (let i of arrayOfStrings) {
                 const [el1, el2] = i
-
-                str1.match(new RegExp(`${el1}`, 'gim')) ?
-                    str1 = str1.replace(new RegExp(`${el1}`, 'gim'), el2) :
-                    str1 = str1.replace(new RegExp(`${el2}`, 'gim'), el1)
+                str1 = str1.replace(new RegExp(`${el1}`, 'gim'), el2)
             }
             return str1
         }
